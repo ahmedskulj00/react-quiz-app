@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { quizContext } from "./Contexts";
 import { Questions } from "./Questions";
+import "../App.css";
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
