@@ -75,3 +75,19 @@
   color: white;
   transition: 0.5s;
 }
+
+@media only screen and (max-width: 414px) {
+  .Quiz {
+    width: 90%;
+  }
+  .options {
+    grid-template-columns: repeat(1, 1fr);
+    width: 30vh;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .options {
+    width: 40vh;
+  }
+}
