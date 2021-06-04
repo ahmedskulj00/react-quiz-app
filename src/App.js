@@ -10,7 +10,7 @@ function App() {
   const [score, setScore] = useState(0);
   return (
     <div className="App">
-      <h1>Ahmed's Quiz App</h1>
+      <h1>Ahmed's History Quiz</h1>
       <quizContext.Provider
         value={{ gameState, setGameState, score, setScore }}
       >

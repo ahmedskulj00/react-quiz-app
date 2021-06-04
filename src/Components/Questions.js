@@ -23,4 +23,20 @@ export const Questions = [
     optionD: "Egypt",
     answer: "optionD",
   },
+  {
+    prompt: "Greenland was a colony of which country until 1981?",
+    optionA: "Denmark",
+    optionB: "Finland",
+    optionC: "Russia",
+    optionD: "USA",
+    answer: "optionA",
+  },
+  {
+    prompt: "Which war took place between 1950 and 1953?",
+    optionA: "Vietnam War",
+    optionB: "Korean War",
+    optionC: "Yugoslavian Wars",
+    optionD: "Soviet-Polish War ",
+    answer: "optionB",
+  },
 ];
