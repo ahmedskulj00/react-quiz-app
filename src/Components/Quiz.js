@@ -1,11 +1,19 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { quizContext } from "./Contexts";
 import { Questions } from "./Questions";
 import "./Quiz.css";
+import "./MainMenu.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
   const { score, setScore, setGameState } = useContext(quizContext);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const nextQuestion = () => {
     if (Questions[currentQuestion].answer == optionChosen) {
@@ -22,7 +30,7 @@ function Quiz() {
   };
 
   return (
-    <div className="Quiz">
+    <div className="Quiz" data-aos="fade-right">
       <h1>{Questions[currentQuestion].prompt}</h1>
       <div className="options">
         <button onClick={() => setOptionChosen("optionA")}>

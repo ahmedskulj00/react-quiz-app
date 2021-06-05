@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { quizContext } from "./Contexts";
 import { Questions } from "./Questions";
 import "./EndScreen.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function EndScreen() {
   const { score, setScore, setGameState } = useContext(quizContext);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const restartQuiz = () => {
     setScore(0);
@@ -12,7 +18,7 @@ function EndScreen() {
   };
 
   return (
-    <div className="EndScreen">
+    <div className="EndScreen" data-aos="fade-right">
       {" "}
       <h1>Quiz Finished!</h1>
       <h3>
